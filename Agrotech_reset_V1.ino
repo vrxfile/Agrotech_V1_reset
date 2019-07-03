@@ -4,7 +4,7 @@
 SimpleTimer timer_reset;
 
 static volatile int working_counter = 0x00;
-const int max_reset_counter = 3;
+const int max_reset_counter = 120;
 
 void setup()
 {
@@ -48,5 +48,7 @@ void resetProcedure()
     delay(5000);
     digitalWrite(4, HIGH);
     digitalWrite(5, HIGH);
+    Serial.println("Started after reset!");
+    Serial.println();
   }
 }
